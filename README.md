@@ -1,5 +1,4 @@
 # NIST Feed
-NIST Feed notifies you about the newest published CVEs according your filters. Keep updated with the latest CVEs according your preferences!
 
 ```
  ____  _____  ____   ____  ______    
@@ -8,6 +7,8 @@ NIST Feed notifies you about the newest published CVEs according your filters. K
   | |\ \| |     \ \ / /     | |  | | 
  _| |_\   |_     \ ' /     _| |_.' / 
 |_____|\____|     \_/     |______.' 
+
+NIST Feed notifies you about the newest published CVEs according your filters. Keep updated with the latest CVEs according your preferences!
 
 Options:
 -A                        Filter by attack complexity metric (LOW='AC:L' or HIGH='AC:H').
