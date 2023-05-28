@@ -14,4 +14,7 @@ sudo sed -i 's/force_xwayland = false/force_xwayland = true/g' "/etc/dunst/dunst
 sudo sed -i 's/mouse_left_click = close_current/mouse_left_click = open_url, close_current/g' "/etc/dunst/dunstrc"
 sudo sed -i 's/mouse_middle_click = do_action, close_current/mouse_middle_click = close_current/g' "/etc/dunst/dunstrc"
 sudo sed -i 's/#default_icon = \/path\/to\/icon/default_icon = "\/usr\/share\/pixmaps\/cve.png"/g' "/etc/dunst/dunstrc"
+
+chmod +x nist-feed
+sudo cp -rf nist-feed /usr/bin/
 echo -n "Done."
