@@ -332,7 +332,9 @@ do
 done
 
 if [[ ! "$notify" ]]; then
-   LAST_CVE=$(<$last_cve_file)
+   if [ -f $last_cve_file ]; then
+      LAST_CVE=$(<$last_cve_file)
+   fi
 fi
 
 if [[ "$id" != "$LAST_CVE" ]] || [ $(crontab -l | wc -c) -eq 0 ];then #if the previous CVE is different from the current one, OR the crontab is empty, popup notification
