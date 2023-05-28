@@ -46,6 +46,7 @@ chmod +x initialization.sh
 ```
 
 # Usage
+## Examples
 Set Desktop Notifications for latest or updated CVE with CRITICAL severity:
 ```
 nist-feed -n -l -s CRITICAL
