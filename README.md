@@ -29,6 +29,7 @@ Options:
 -V                        Filter by attack vector metric (NETWORK='AV:N', ADJACENT='AV:A', LOCAL='AV:L' or PHYSICAL='AV:P').
 -z                        Disable desktop notification.
 ```
+
 # Installation
 Install the following dependencies:
 ```
@@ -43,3 +44,35 @@ cd NIST-Feed
 chmod +x initialization.sh
 ./initialization.sh
 ```
+
+# Usage
+Set Desktop Notifications for latest or updated CVE with CRITICAL severity:
+```
+nist-feed -n -l -s CRITICAL
+```
+Show details about the last three CVEs. No Desktop Notifications:
+```
+nist-feed -r 3
+```
+
+Show details about the last twenty CVEs with PHYSICAL as attack vector and MEDIUM severity. No Desktop Notifications:
+```
+nist-feed -V AV:P -s MEDIUM
+```
+
+Set Desktop Notifications for latest or updated CVE having high Confidentiality, Integrity and Availability impact:
+```
+nist-feed -n -l -m C:H/I:H/A:H
+```
+or
+```
+nist-feed -n -l -c C:H -i I:H -a A:H
+```
+
+Set Desktop Notifications for latest or updated CVE with HIGH attack complexity and NETWORK as attack vector:
+```
+nist-feed -n -l -A AC:H -V AV:N
+```
+
+# References
+https://nvd.nist.gov
